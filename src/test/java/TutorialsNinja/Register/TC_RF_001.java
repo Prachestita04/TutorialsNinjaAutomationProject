@@ -48,7 +48,7 @@ public class TC_RF_001 {
 
         Assert.assertTrue(driver.findElement(By.linkText("Logout")).isDisplayed());
         String expectedHeading = "Your Account Has Been Created!";
-        Assert.assertEquals(driver.findElement(By.xpath("//div[@id='common-success']//h1")).getText(),expectedHeading);
+        Assert.assertEquals(driver.findElement(By.xpath("//div[@id='common-success']//h1")).getText(), expectedHeading);
 
         String actualProperDetailsOne = "Congratulations! Your new account has been successfully created!";
         String actualProperDetailsTwo = "You can now take advantage of member privileges to enhance your online shopping experience with us.";
@@ -69,14 +69,15 @@ public class TC_RF_001 {
 
         driver.quit();
     }
-    public String generateRandomEmail(){
+
+    public String generateRandomEmail() {
         //generate email using timestamp
 
         Date date = new Date();
         String dateString = date.toString();
-        String replaceSpaceInDate = dateString.replaceAll("\\s","");
-        String replaceColonInDate = replaceSpaceInDate.replaceAll("\\:","");
-        String emailUsingTimestamp = replaceColonInDate+"@g.co";
+        String replaceSpaceInDate = dateString.replaceAll("\\s", "");
+        String replaceColonInDate = replaceSpaceInDate.replaceAll("\\:", "");
+        String emailUsingTimestamp = replaceColonInDate + "@g.co";
         return emailUsingTimestamp;
     }
 }
