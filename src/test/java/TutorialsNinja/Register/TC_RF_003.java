@@ -12,7 +12,7 @@ import java.util.Date;
 public class TC_RF_003 {
 
     @Test
-    public void verifyAllFieldsInRegister(){
+    public void verifyAllFieldsInRegister() {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
@@ -60,11 +60,11 @@ public class TC_RF_003 {
 
     }
 
-    public String randomMailUsingTimestamp(){
+    public String randomMailUsingTimestamp() {
         Date date = new Date();
         String dateString = date.toString();
-        String replaceDateString = dateString.replaceAll("\\s","").replaceAll("\\:","");
-        String dateUsingTimeStamp = replaceDateString+"@g.co";
+        String replaceDateString = dateString.replaceAll("\\s", "").replaceAll("\\:", "");
+        String dateUsingTimeStamp = replaceDateString + "@g.co";
         return dateUsingTimeStamp;
     }
 }
